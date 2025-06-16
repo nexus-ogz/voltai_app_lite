@@ -3,6 +3,7 @@ import plotly.express as px
 import httpx
 from ressources.models_fitted.random_forests.model_features import df_summary_with_mapping
 
+
 URL_PRICING_KWH = "https://open-dpe.fr/api/v1/electricity.php?tarif=EDF_bleu"
 PROD_DATA_FILE = "app/data/prod.json"
 metadata_tarif = {
