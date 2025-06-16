@@ -1,14 +1,12 @@
 from contents import *
-from contents import page1, page2, page3, page4
+from contents import page1, page4
 
 # st.set_option('deprecation.showPyplotGlobalUse', False)
 # st.set_page_config(layout="wide")
 
 pages = {
-    " 1 - Présentation générale": page1.main,
-    " 2 - Analyse exploratoire": page2.main,
-    " 3 - Modèles": page3.main,
-    " 4 - Démo": page4.main,
+    " Présentation générale": page1.main,
+    " Démo": page4.main,
 }
 
 st.sidebar.title('Navigation')
