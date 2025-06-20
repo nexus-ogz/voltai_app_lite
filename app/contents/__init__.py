@@ -1,13 +1,10 @@
-import json, os
-import pickle
-import streamlit as st
-import pandas as pd
-import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
 import joblib
+import seaborn as sns
+import json, pickle, sys, os
+import matplotlib.pyplot as plt
+import pandas as pd, numpy as np, streamlit as st
 
-import sys, os
+
 path = os.path.abspath(os.path.dirname(__file__))
 sys.path.append(os.path.join(path, '../..'))
 

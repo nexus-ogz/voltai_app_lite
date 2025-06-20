@@ -1,6 +1,6 @@
-from contents import *
-import plotly.express as px
 import httpx
+import plotly.express as px
+from contents import *
 from ressources.models_fitted.random_forests.model_features import df_summary_with_mapping
 
 
@@ -164,9 +164,10 @@ def main(selected_ville, selected_annee, model_metadata=model_metadata):
             # ajouter les predictions to the DataFrame
             input_model_df['conso_kwh_m2'] = prediction
             # sauv logs
-            with open(PROD_DATA_FILE, 'a') as f:
-                for record in input_model_df.to_dict(orient='records'):
-                    f.write(json.dumps(record) + '\n')
+            # IRL this would be done depending on whether user validate or not
+            # with open(PROD_DATA_FILE, 'a') as f:
+            #     for record in input_model_df.to_dict(orient='records'):
+            #         f.write(json.dumps(record) + '\n')
                 
             # refaire le df à afficher 
             res_df = input_model_df.copy()
